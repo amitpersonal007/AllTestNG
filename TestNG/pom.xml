@@ -3,6 +3,10 @@
   <groupId>TestNG </groupId>
   <artifactId>TestNG</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 
 <dependencyManagement>
   <dependencies>
@@ -88,12 +92,7 @@
 
 
 
-<!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
-<dependency>
-    <groupId>com.jayway.jsonpath</groupId>
-    <artifactId>json-path</artifactId>
-    <version>2.7.0</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -102,11 +101,7 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
-<dependency>
-    <groupId>com.jayway.jsonpath</groupId>
-    <artifactId>json-path</artifactId>
-    <version>2.7.0</version>
-</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/fontbox -->
 <dependency>
@@ -143,9 +138,5 @@
     <artifactId>java-client</artifactId>
     <version>7.6.0</version>
 </dependency>
-
-
-
-
 </dependencies>
 </project>

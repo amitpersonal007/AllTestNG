@@ -17,12 +17,12 @@ public class ExcelRead {
 	
 	
 	@Test
-public void pdflocal() throws IOException, CsvException{
+       public void pdflocal() throws IOException, CsvException{
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		File s1 = getLastModified("C:\\Users\\Amit\\Downloads");
+		File s1 = getLastModified("/Users/amitsavyasachi/Downloads");
 		
 		System.out.println(s1.getName());
 		
