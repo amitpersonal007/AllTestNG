@@ -13,7 +13,7 @@ import com.opencsv.exceptions.CsvException;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ExcelRead {
+public class CsvRead {
 	
 	
 	@Test
