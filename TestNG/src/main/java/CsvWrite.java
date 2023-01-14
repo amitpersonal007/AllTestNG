@@ -40,7 +40,7 @@ public class CsvWrite {
 		writer.writeAll(data);
 		writer.flush();
 		writer.close();
-    		
+    		System.out.println("Success in writing");
 		driver.quit();
 
 		
