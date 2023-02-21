@@ -24,12 +24,23 @@
 		<link>
 			<name>tessdata213312</name>
 			<type>2</type>
-			<location>C:/Users/Amit/Downloads/Tess4J-3.4.8-src/Tess4J/tessdata</location>
+			<location>/Users/amitsavyasachi/VSCODE/AllTestNG/C::/Users/Amit/Downloads/Tess4J-3.4.8-src/Tess4J/tessdata</location>
 		</link>
 		<link>
 			<name>src/main/resources/first-planet-344506-3b0a641da12c.json</name>
 			<type>1</type>
-			<location>C:/Users/Amit/Downloads/first-planet-344506-3b0a641da12c.json</location>
+			<location>/Users/amitsavyasachi/VSCODE/AllTestNG/C::/Users/Amit/Downloads/first-planet-344506-3b0a641da12c.json</location>
 		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1676950211484</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>
