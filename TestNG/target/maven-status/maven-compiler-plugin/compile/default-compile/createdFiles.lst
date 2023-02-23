@@ -2,11 +2,12 @@ TesseractTess.class
 LocalPdf.class
 FindElements.class
 DesktopExcelTC3AddSheet.class
+CsvRead.class
+MultiElementDispalyCheck.class
 SignDeskQrCode.class
 databasetesting/CloudFirebase.class
 AirMeetApi.class
 ChromeExtension.class
-ExcelRead.class
 MobileTests/BsCloudAndroid.class
 MobileTests/LambdaTest.class
 QuadWave.class
@@ -25,6 +26,8 @@ KeyboardWeb.class
 EmulateGeolocation.class
 DesktopExcelTc2.class
 DesktopPowerPointTc1.class
+CsvWrite.class
+PatternMatcherCdmx.class
 simplejava.class
 DesktopTesting/DesktopExcelTc2.class
 CodeMirror.class

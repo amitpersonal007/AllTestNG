@@ -25,6 +25,12 @@ public class PatternMatcherCdmx {
        String e = newString.replace("testing", replacedString);
 
        System.out.println(e);
+
+       String originalString = "This is a string with $|test| character.";
+String replacementString = "replacement_text";
+String regex = "\\$\\|([^|]+)\\|";
+String newString1 = originalString.replaceAll(regex, replacementString);
+System.out.println(newString1);
        
     }
 }

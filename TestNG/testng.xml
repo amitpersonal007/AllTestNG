@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name=".DesktopPowerPointTc1"/>
+      <class name="cloudIntegration.BrowserstackWeb"/>
+      <class name="MobileTests.BsPushfile"/>
+      <class name=".NetgearIssue"/>
+      <class name=".LocalExe"/>
+      <class name=".ConsoleText"/>
+      <class name=".TesseractTess"/>
+      <class name="DesktopTesting.DesktopPowerPointTc1"/>
+      <class name=".EmulateGeolocation"/>
+      <class name="MobileTests.BsCloudAndroid"/>
+      <class name="MobileTests.GleacBs"/>
+      <class name="DesktopTesting.DesktopExcelTC3AddSheet"/>
+      <class name="DesktopTesting.IclickerCloud"/>
+      <class name="DesktopTesting.DesktopExcelTest"/>
+      <class name=".LocalPdf"/>
+      <class name="DesktopTesting.WordAutomation"/>
+      <class name="MobileTests.LtTest"/>
+      <class name=".CsvRead"/>
+      <class name=".CsvWrite"/>
+      <class name=".CanvasTrim"/>
+      <class name=".GetScreenshotandUpload"/>
+      <class name="MobileTests.LambdaTest"/>
+      <class name=".simplejava"/>
+      <class name="MobileTests.BrowserStackCloudIos"/>
+      <class name=".NtucApi"/>
+      <class name=".CodeMirror"/>
+      <class name="MobileTests.KeyEvents"/>
+      <class name=".PdfBox"/>
+      <class name=".ChromeExtension"/>
+      <class name="databasetesting.CloudFirebase"/>
+      <class name=".KeyboardWeb"/>
+      <class name=".DesktopExcelTest"/>
+      <class name="DesktopTesting.DesktopExcelTc2"/>
+      <class name=".SignDeskQrCode"/>
+      <class name=".GetElementScreenshotApi"/>
+      <class name="MobileTests.AdbExe"/>
+      <class name=".AirMeetApi"/>
+      <class name=".DesktopExcelTC3AddSheet"/>
+      <class name=".DesktopExcelTc2"/>
+      <class name="cloudIntegration.SauceLabWeb"/>
+      <class name=".MathFunction"/>
+      <class name=".FindElements"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
