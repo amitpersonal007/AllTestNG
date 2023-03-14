@@ -22,17 +22,16 @@ public class CsvRead {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		File s1 = getLastModified("/Users/amitsavyasachi/Downloads");
-		
+		File s1 = getLastModified("/Users/amits/Downloads");
 		System.out.println(s1.getName());
-		
 		Reader reader = new FileReader(s1.getAbsolutePath());
+		File file = new File(s1.getName());
+		String fileName = file.getName();
 		
 		CSVReader csvreader = new CSVReader(reader);
+		System.out.println("The name of the CSV file is: " + fileName);
 		List<String[]> data = csvreader.readAll();
 		System.out.println(data.size());
-		
-		
 	}
 	
 	public static File getLastModified(String directoryFilePath)

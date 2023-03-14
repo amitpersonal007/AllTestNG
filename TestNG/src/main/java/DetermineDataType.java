@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class DetermineDataType {
 
-    String input="STISAS";
+    String input="true";
 
     @Test
     public void datatypecheck() throws IOException, ClassNotFoundException {
