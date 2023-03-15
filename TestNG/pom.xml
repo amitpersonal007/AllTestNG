@@ -138,7 +138,24 @@
     <version>2.0.26</version>
 </dependency>
 
-<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>javax.mail</artifactId>
+        <version>1.6.2</version>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/com.google.android/android -->
+    <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>4.1.1.4</version>
+        <scope>provided</scope>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 <dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
