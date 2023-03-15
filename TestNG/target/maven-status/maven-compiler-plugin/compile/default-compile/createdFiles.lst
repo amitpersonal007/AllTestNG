@@ -42,10 +42,12 @@ RandomDataGenerator.class
 DesktopExcelTc2.class
 GmailReader.class
 CodeMirror.class
+GmailReader$1.class
 DesktopTesting/DesktopExcelTC3AddSheet.class
 DesktopTesting/WordAutomation.class
 MobileTests/LtTest.class
 DesktopTesting/IclickerCloud.class
+ElementComparison.class
 MobileTests/BsPushfile.class
 DesktopExcelTest.class
 MathFunction.class

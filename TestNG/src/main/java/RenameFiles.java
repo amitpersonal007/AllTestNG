@@ -15,6 +15,7 @@ public class RenameFiles {
         // sort files by last modified time and select the latest file
         Arrays.sort(files, Comparator.comparingLong(File::lastModified).reversed());
         File latestFile = files[0];
+        latestFile.getName();
 
         // generate new file name and rename the file
         String newFileName = "new_file_n.csv"; // replace with actual new file name

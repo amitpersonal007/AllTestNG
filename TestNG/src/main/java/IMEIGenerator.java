@@ -1,66 +1,36 @@
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
 public class IMEIGenerator {
-    private static final int NUM_IMEI = 30;
-    private static final String CSV_FILE = "/Users/amits/Downloads/new_file_n.csv";
-
     public static void main(String[] args) {
-        try {
-            FileWriter writer = new FileWriter(CSV_FILE);
-            writer.write("IMEI\n"); // write header row
+        int numOfIMEIs = 30;
+        String[] imeis = new String[numOfIMEIs];
 
-            for (int i = 0; i < NUM_IMEI; i++) {
-                String imei = generateRandomIMEI();
-                writer.write(imei + "\n"); // write IMEI to file
+        // Generate 30 random 7-digit numbers and concatenate them with "0000002"
+        Random random = new Random();
+        for (int i = 0; i < numOfIMEIs; i++) {
+            int randomNum = random.nextInt(9000000) + 1000000;
+            imeis[i] = "0000002" + String.valueOf(randomNum);
+        }
+        // Create a new CSV file with header "IMEI" and write the IMEI values to it
+        String csvFile = "IMEI2.csv";
+        File file = new File(csvFile);
+        String absolutePath = file.getAbsolutePath();
+        System.out.println(absolutePath);
+        String csvHeader = "IMEI";
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            writer.append(csvHeader);
+            writer.append("\n");
+
+            for (String imei : imeis) {
+                writer.append(imei);
+                writer.append("\n");
             }
-
-            writer.close();
-            System.out.println("IMEI numbers written to file " + CSV_FILE);
+            System.out.println("IMEIs generated and saved to file: " + csvFile);
         } catch (IOException e) {
-            System.out.println("An error occurred while writing to file " + CSV_FILE);
             e.printStackTrace();
         }
     }
-
-    private static String generateRandomIMEI() {
-        Random rand = new Random();
-        StringBuilder sb = new StringBuilder();
-
-        // First 8 digits are TAC (Type Allocation Code)
-        for (int i = 0; i < 8; i++) {
-            sb.append(rand.nextInt(10));
-        }
-
-        // Next 6 digits are FAC (Final Assembly Code)
-        sb.append("0000");
-
-        // Last digit is the Luhn checksum
-        int[] imeiArr = new int[15];
-        for (int i = 0; i < 14; i++) {
-            imeiArr[i] = Character.getNumericValue(sb.charAt(i));
-        }
-        imeiArr[14] = calculateLuhnChecksum(imeiArr);
-        sb.append(imeiArr[14]);
-
-        return sb.toString();
-    }
-
-    private static int calculateLuhnChecksum(int[] arr) {
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            int digit = arr[i];
-            if (i % 2 == 0) {
-                digit *= 2;
-                if (digit > 9) {
-                    digit -= 9;
-                }
-            }
-            sum += digit;
-        }
-        int checksum = (10 - (sum % 10)) % 10;
-        return checksum;
-    }
 }
-
