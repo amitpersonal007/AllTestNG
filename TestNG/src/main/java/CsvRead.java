@@ -1,17 +1,15 @@
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
-
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvException;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CsvRead {
 	
@@ -30,8 +28,12 @@ public class CsvRead {
 		
 		CSVReader csvreader = new CSVReader(reader);
 		System.out.println("The name of the CSV file is: " + fileName);
-		List<String[]> data = csvreader.readAll();
-		System.out.println(data.size());
+		//List<String[]> data = csvreader.readAll();
+		List<String[]> csvvalue = csvreader.readAll();
+		String[] csvRow = csvvalue.get(8);
+		String csvColumn = csvRow[0];
+
+		System.out.println(csvColumn);
 	}
 	
 	public static File getLastModified(String directoryFilePath)

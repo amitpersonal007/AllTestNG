@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class IMEIGenerator {
     public static void main(String[] args) {
-        int numOfIMEIs = 30;
+        int numOfIMEIs = 10;
         String[] imeis = new String[numOfIMEIs];
 
         // Generate 30 random 7-digit numbers and concatenate them with "0000002"
@@ -15,7 +15,7 @@ public class IMEIGenerator {
             imeis[i] = "0000002" + String.valueOf(randomNum);
         }
         // Create a new CSV file with header "IMEI" and write the IMEI values to it
-        String csvFile = "IMEI2.csv";
+        String csvFile = "/Users/amits/Desktop/CSVFiles/newcsvfile.csv";
         File file = new File(csvFile);
         String absolutePath = file.getAbsolutePath();
         System.out.println(absolutePath);
