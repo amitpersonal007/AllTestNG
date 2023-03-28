@@ -19,7 +19,7 @@ public class IMEIGenerator {
         File file = new File(csvFile);
         String absolutePath = file.getAbsolutePath();
         System.out.println(absolutePath);
-        String csvHeader = "IMEI";
+        String csvHeader = "";
         try (FileWriter writer = new FileWriter(csvFile)) {
             writer.append(csvHeader);
             writer.append("\n");

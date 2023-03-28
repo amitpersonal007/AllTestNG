@@ -3,13 +3,12 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class GmailReader {
+public class EmailFetch {
     public static void main(String[] args) {
         String host = "imap.gmail.com";
         String port = "993";
-        String username = "amitsamsungtest@gmail.com\n";  //kcsdqa@gmail.com / HouseAcrossTheRiverNoida
-
-        String password = "gwrlglvldwjtgidr";  //
+        String username = "samsungtestmailkcs@gmail.com";  //kcsdqa@gmail.com / HouseAcrossTheRiverNoida
+        String password = "fnwoohqhjkkqrlls";  //lpqdekfseyhliapk
 
 
         Properties props = new Properties();
@@ -26,7 +25,6 @@ public class GmailReader {
                     return new PasswordAuthentication(username, password);
                 }
             });
-
             Store store = session.getStore("imaps");
             store.connect(host, username, password);
 
@@ -37,6 +35,7 @@ public class GmailReader {
             Message latestMessage = messages[messages.length - 1];
 
             Object content = latestMessage.getContent();
+            System.out.println(content);
             Multipart multipart = (Multipart) content;
             BodyPart bodyPart = multipart.getBodyPart(0);
 
@@ -49,9 +48,9 @@ public class GmailReader {
 
             if (matcher.find()) {
                 String otp = matcher.group(1);
-                System.out.println("OTP is "+otp);
+                System.out.println("PIN is "+otp);
             } else {
-                System.out.println("NOT OTP");
+                System.out.println("NOT A PIN");
             }
 
             //System.out.println("Subject: " + latestMessage.getSubject());

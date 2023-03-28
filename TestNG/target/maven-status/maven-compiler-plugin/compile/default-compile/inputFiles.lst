@@ -4,9 +4,9 @@
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopExcelTc2.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopTesting/DesktopExcelTC3AddSheet.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopPowerPointTc1.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/RandomStringGenerator.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/RenameFiles.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/LocalPdf.java
-/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/GmailReader.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DeleteFiles.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/GetElementScreenshotApi.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/ChromeExtension.java
@@ -18,6 +18,7 @@
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopTesting/DesktopExcelTest.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/PdfBox.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/NtucApi.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/EmailFetch.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopTesting/WordAutomation.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DesktopTesting/DesktopExcelTc2.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/cloudIntegration/BrowserstackWeb.java
@@ -30,7 +31,11 @@
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/CsvWrite.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/MultiElementCheck.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/KeyboardWeb.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/DriverSession.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/GenerateRandomNumber.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/ComparePortalHeader.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/FindElements.java
+/Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/WriteCSV.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/CsvRead.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/QuadWave.java
 /Users/amits/IdeaProjects/AllTestNG/TestNG/src/main/java/MultiElementDispalyCheck.java

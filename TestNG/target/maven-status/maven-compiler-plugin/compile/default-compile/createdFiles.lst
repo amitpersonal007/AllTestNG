@@ -1,6 +1,8 @@
 DetermineDataType.class
+WriteCSV.class
 FindElements.class
 MultiElementDispalyCheck.class
+RandomStringGenerator.class
 MobileTests/LambdaTest.class
 RenameFiles.class
 PdfBox.class
@@ -20,8 +22,10 @@ DesktopTesting/DesktopExcelTc2.class
 cloudIntegration/SauceLabWeb.class
 GetScreenshotandUpload.class
 ConsoleText.class
+DriverSession.class
 MultiElementCheck.class
 TesseractTess.class
+GenerateRandomNumber.class
 LocalPdf.class
 DesktopExcelTC3AddSheet.class
 CsvRead.class
@@ -40,9 +44,8 @@ CanvasTrim.class
 KeyboardWeb.class
 RandomDataGenerator.class
 DesktopExcelTc2.class
-GmailReader.class
+ComparePortalHeader.class
 CodeMirror.class
-GmailReader$1.class
 DesktopTesting/DesktopExcelTC3AddSheet.class
 DesktopTesting/WordAutomation.class
 MobileTests/LtTest.class

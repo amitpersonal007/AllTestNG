@@ -125,11 +125,14 @@
     <artifactId>pdfbox</artifactId>
     <version>2.0.26</version>
 </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.mail/jakarta.mail-api -->
+    <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
     <dependency>
-        <groupId>com.sun.mail</groupId>
-        <artifactId>javax.mail</artifactId>
-        <version>1.6.2</version>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.google.android/android -->
     <dependency>
         <groupId>com.google.android</groupId>
