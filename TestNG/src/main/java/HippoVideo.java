@@ -29,7 +29,7 @@ public class HippoVideo {
         URL url = new URL("https://testsigma-prod:513c92de-cf49-4731-a434-2a2bcd733689@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         RemoteWebDriver driver = new RemoteWebDriver(url, options);
 
-        driver.get("https://pre.hippovideo.io/video-templates/home?api_key=5EY0i8mD46BMmohMPWiNRgtt&email=deepa%2Btestingtemplatebuilder%40hippovideo.io\n");
+        driver.get("https://pre.hippovideo.io/video-templates/home?api_key=VALUEOFAPI");
 driver.findElement(By.xpath("//div[@class='hvvtlisting-header']//a[@class='create-flow-btn']\n")).click();
 driver.findElement(By.xpath("//div[@class='slides']//div[2]\n")).click();
 driver.findElement(By.xpath("//button[normalize-space()='Camera Only']\n")).click();
