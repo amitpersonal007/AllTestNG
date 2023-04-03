@@ -1,5 +1,3 @@
-package utils;
-
 import com.testsigma.sdk.ApplicationType;
 import com.testsigma.sdk.WebAction;
 import com.testsigma.sdk.annotation.Action;
@@ -29,6 +27,12 @@ public class RemoveWhiteSpace extends WebAction {
 
 logger.info(normalizedStr1+"<<<< VALUE OF FIRST STRING>>>>> "+normalizedStr2+"  <<<<<VALUE OF SECOND STRING");
 try{
+   if(normalizedStr1.length() == normalizedStr2.length()){
+       logger.info("Number of character matches");
+   }else{
+       result = com.testsigma.sdk.Result.FAILED;
+       setErrorMessage("Operation failed since the count of characters are not equal");
+   }
 normalizedStr1.contains(normalizedStr2);
 setSuccessMessage("Successfully verified that "+String1.getValue().toString()+"  contains "+String2.getValue().toString());
 
@@ -41,4 +45,5 @@ setSuccessMessage("Successfully verified that "+String1.getValue().toString()+" 
         return result;
     }
 }
+
 
