@@ -1,0 +1,67 @@
+import com.testsigma.sdk.ApplicationType;
+import com.testsigma.sdk.WebAction;
+import com.testsigma.sdk.annotation.Action;
+import com.testsigma.sdk.annotation.RunTimeData;
+import com.testsigma.sdk.annotation.TestData;
+import lombok.Data;
+import org.apache.commons.lang3.exception.ExceptionUtils;
+
+
+
+@Data
+@Action(actionText = "Add testdata and store the value in a runtime variable testdata2 considering n decimal points",
+        description = "executes multiple number addition",
+        applicationType = ApplicationType.WEB)
+
+
+
+public class CustomAction extends WebAction {
+
+    @TestData(reference = "testdata")
+    private com.testsigma.sdk.TestData testdata;
+
+    @TestData(reference = "testdata")
+    private com.testsigma.sdk.TestData testdata2;
+    @TestData(reference = "n")
+    private com.testsigma.sdk.TestData n;
+
+    @RunTimeData
+    private com.testsigma.sdk.RunTimeData runtimeData;
+
+
+
+    @Override
+    public com.testsigma.sdk.Result execute() {
+
+        com.testsigma.sdk.Result result = com.testsigma.sdk.Result.SUCCESS;
+        logger.info("Initiating execution");
+        try {
+
+            String input = testdata.getValue().toString();
+
+            String[] numbers = input.split(",");
+            double sum = 0.0;
+
+            for (String number : numbers) {
+                sum += Double.parseDouble(number);
+            }
+
+            System.out.print("Enter desired decimal places for output: ");
+            int decimalPlaces = Integer.valueOf(n.getValue().toString());
+
+            String formatString = "%." + decimalPlaces + "f";
+            String output = String.format(formatString, sum);
+
+           runtimeData.setKey(testdata2.getValue().toString());
+           runtimeData.setValue(output);
+
+
+        } catch (Exception e) {
+            String errorMessage = ExceptionUtils.getStackTrace(e);
+            result = com.testsigma.sdk.Result.FAILED;
+            setErrorMessage(errorMessage);
+            logger.warn(errorMessage);
+        }
+        return result;
+    }
+}
