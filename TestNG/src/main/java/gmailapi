@@ -34,7 +34,7 @@ public class GetGmailPin extends WebAction {
 
         String host = "imap.gmail.com";
         String port = "993";
-        String username = EmailID.getValue().toString();  //kcsdqa@gmail.com / HouseAcrossTheRiverNoida
+        String username = EmailID.getValue().toString();  
         String password = Password.getValue().toString();  //
 
 

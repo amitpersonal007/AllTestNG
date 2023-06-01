@@ -29,7 +29,7 @@ public class AirMeetApi {
 				Request request = new Request.Builder()
 				  .url("https://api.airmeet.com/api/v1/airmeet/571844b0-b395-11ec-a8f3-bf153324ebd1/info")
 				  .method("GET", null)
-				  .addHeader("Cookie", "__cf_bm=ZbVcZPu5EGlPoTiv8S7COt2r9pwqtJeliiuMA6EHrSw-1655113754-0-AcGem2SRct4g+MKkaS42dVIHfu+Y2qNly05omKC/eCxEvPvtrGprPGkwuDjq8zGLV0FIZZv0uFwAaHXXdrW0LLU=; _cfuvid=II4gnYbhnG4OfqASe74Xqt1ECwQBcqFMS_Gnq_GGlj4-1655113754383-0-604800000")
+				  .addHeader("Cookie", "COOKIE_VALUE")
 				  .build();
 				Response response = client.newCall(request).execute();
 				

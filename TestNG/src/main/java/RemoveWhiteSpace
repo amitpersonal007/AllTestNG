@@ -1,0 +1,49 @@
+import com.testsigma.sdk.ApplicationType;
+import com.testsigma.sdk.WebAction;
+import com.testsigma.sdk.annotation.Action;
+import com.testsigma.sdk.annotation.TestData;
+import lombok.Data;
+
+
+
+@Data
+@Action(actionText = "Compare if String1 contains String2 ignoring any white space and case sensitivity",
+        description = "Verifying the value displayed in the csv file",
+        applicationType = ApplicationType.WEB)
+
+public class RemoveWhiteSpace extends WebAction {
+
+    @TestData(reference = "String1")
+    private com.testsigma.sdk.TestData String1;
+    @TestData(reference = "String2")
+    private com.testsigma.sdk.TestData String2;
+
+
+    @Override
+    public com.testsigma.sdk.Result execute() {
+        com.testsigma.sdk.Result result = com.testsigma.sdk.Result.SUCCESS;
+        String normalizedStr1 = String1.getValue().toString().replaceAll("\\s+", "").toLowerCase();
+        String normalizedStr2 = String2.getValue().toString().replaceAll("\\s+", "").toLowerCase();
+
+logger.info(normalizedStr1+"<<<< VALUE OF FIRST STRING>>>>> "+normalizedStr2+"  <<<<<VALUE OF SECOND STRING");
+try{
+   if(normalizedStr1.length() == normalizedStr2.length()){
+       logger.info("Number of character matches");
+   }else{
+       result = com.testsigma.sdk.Result.FAILED;
+       setErrorMessage("Operation failed since the count of characters are not equal");
+   }
+normalizedStr1.contains(normalizedStr2);
+setSuccessMessage("Successfully verified that "+String1.getValue().toString()+"  contains "+String2.getValue().toString());
+
+}catch(Exception e){
+
+    result = com.testsigma.sdk.Result.FAILED;
+    setErrorMessage("Operation failed "+e.getMessage());
+
+        }
+        return result;
+    }
+}
+
+
