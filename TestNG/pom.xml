@@ -133,6 +133,20 @@
         <version>1.4</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.influxdb/influxdb-client -->
+    <dependency>
+        <groupId>org.influxdb</groupId>
+        <artifactId>influxdb-java</artifactId>
+        <version>2.23</version>
+    </dependency>
+
+
+    <dependency>
+        <groupId>com.influxdb</groupId>
+        <artifactId>influxdb-client-java</artifactId>
+        <version>6.8.0</version>
+    </dependency>
+
     <!-- https://mvnrepository.com/artifact/com.google.android/android -->
     <dependency>
         <groupId>com.google.android</groupId>
@@ -146,6 +160,12 @@
     <artifactId>java-client</artifactId>
     <version>7.6.0</version>
 </dependency>
+    <!-- https://mvnrepository.com/artifact/com.squareup.okio/okio -->
+    <dependency>
+        <groupId>com.squareup.okio</groupId>
+        <artifactId>okio</artifactId>
+        <version>1.16.0</version>
+    </dependency>
 </dependencies>
     <build>
         <plugins>

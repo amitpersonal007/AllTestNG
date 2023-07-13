@@ -1,15 +1,12 @@
 import javax.mail.*;
 import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class EmailFetch {
     public static void main(String[] args) {
         String host = "imap.gmail.com";
         String port = "993";
-        String username = "samsungtestmailkcs@gmail.com";  //kcsdqa@gmail.com / HouseAcrossTheRiverNoida
-        String password = "fnwoohqhjkkqrlls";  //lpqdekfseyhliapk
-
+        String username = "usertestsigma@cloudbyz.com";
+        String password = "cwvbarlmeuvgvoxo";
 
         Properties props = new Properties();
         props.setProperty("mail.store.protocol", "imaps");
@@ -35,23 +32,53 @@ public class EmailFetch {
             Message latestMessage = messages[messages.length - 1];
 
             Object content = latestMessage.getContent();
-            System.out.println(content);
-            Multipart multipart = (Multipart) content;
-            BodyPart bodyPart = multipart.getBodyPart(0);
-
-
-
-            String FullMessage = (String) bodyPart.getContent();
-            System.out.println(FullMessage);
-            Pattern pattern = Pattern.compile("(?s)PIN\\s*(\\d+)");
-            Matcher matcher = pattern.matcher(FullMessage);
-
-            if (matcher.find()) {
-                String otp = matcher.group(1);
-                System.out.println("PIN is "+otp);
+           // System.out.println(content);
+            BodyPart bodyPart = null;
+            String FullMessage = null;
+            if (content instanceof String) {
+               // System.out.println(content);
+                FullMessage = (String) content;
+            } else if (content instanceof Multipart) {
+                // content is already a Multipart object, so just cast it and process the body part
+                Multipart multipart = (Multipart) content;
+                bodyPart = multipart.getBodyPart(0);
+                FullMessage = (String) bodyPart.getContent();
+                // process the body part as needed
             } else {
-                System.out.println("NOT A PIN");
+                System.out.println("No content");
             }
+
+            //System.out.println(FullMessage);
+//            Pattern pattern = Pattern.compile("\\d+");
+//           // Pattern pattern = Pattern.compile("(?s)PIN\\s*(\\d+)");
+//            Matcher matcher = pattern.matcher(FullMessage);
+
+            String verificationCodePrefix = "Verification Code: ";
+            int verificationCodeIndex = FullMessage.indexOf(verificationCodePrefix);
+
+            if (verificationCodeIndex != -1) {
+                int verificationCodeStartIndex = verificationCodeIndex + verificationCodePrefix.length();
+                String verificationCode = FullMessage.substring(verificationCodeStartIndex, verificationCodeStartIndex + 6);
+                System.out.println(verificationCode);
+            } else {
+                System.out.println("Verification code not found.");
+            }
+
+
+
+//            if (matcher.find()) {
+//                String otp = matcher.group(1);
+//                System.out.println("PIN is " + otp);
+//            } else {
+//                System.out.println("NOT A PIN");
+//            }
+            // check if the pattern matched any groups before trying to access them
+//            if (matcher.matches() && matcher.groupCount() >= 1) {
+//                String code = matcher.group(1);
+//                System.out.println("Verification code: " + code);
+//            } else {
+//                System.out.println("Verification code not found.");
+//            }
 
             //System.out.println("Subject: " + latestMessage.getSubject());
             inbox.close(false);

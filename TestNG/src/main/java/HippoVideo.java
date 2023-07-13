@@ -24,7 +24,7 @@ public class HippoVideo {
         options.addArguments("--auto-select-desktop-capture-source=Entire screen");
         options.addArguments("--auto-accept-camera-and-microphone-capture");
 
-
+//testsigma does this
 
         URL url = new URL("https://testsigma-prod:513c92de-cf49-4731-a434-2a2bcd733689@ondemand.us-west-1.saucelabs.com:443/wd/hub");
         RemoteWebDriver driver = new RemoteWebDriver(url, options);
