@@ -1,18 +1,13 @@
-
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.net.URL;
-
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.lowagie.text.pdf.codec.Base64.InputStream;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.net.URL;
 
 public class PdfBox {
 	
